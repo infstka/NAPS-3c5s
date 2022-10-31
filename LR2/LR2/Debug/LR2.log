@@ -1,0 +1,3 @@
+﻿  ServerT.cpp
+D:\NAPS-3c5s\LR2\LR2\ServerT.cpp(52,6): warning C4101: t: неиспользованная локальная переменная
+  LR2.vcxproj -> D:\NAPS-3c5s\LR2\Debug\ServerT.exe
