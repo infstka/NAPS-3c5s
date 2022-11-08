@@ -31,7 +31,7 @@ std::string  GetErrorMsgText(int code)
 	case WSAEOPNOTSUPP:	return "Операция не поддерживается";
 	case WSAEPFNOSUPPORT: return "Тип протоколов не поддерживается";
 	case WSAEAFNOSUPPORT: return "Тип адресов не поддерживается протоколом";
-	case WSAEADDRINUSE:	return "Адрес уже используется";
+	case WSAEADDRINUSE:	return "Адрес уже используется"; //6
 	case WSAEADDRNOTAVAIL: return "Запрошенный адрес не может быть использован";
 	case WSAENETDOWN: return "Сеть отключена";
 	case WSAENETUNREACH: return "Сеть не достижима";
@@ -153,7 +153,7 @@ int main(int argc, _TCHAR* argv[])
 			throw  SetErrorMsgText("Startup:", WSAGetLastError());
 		}
 
-		char name[] = "Hello";
+		char name[] = "Hello"; //позывной (набор символов, получаемый сервером от клиента и интепретируемый, как запрос на установку соединения)
 
 		for (;;)
 		{
