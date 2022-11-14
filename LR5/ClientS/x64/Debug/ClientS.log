@@ -1,0 +1,4 @@
+﻿  ClientS.cpp
+D:\NAPS-3c5s\LR5\ClientS\ClientS.cpp(105,5): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\NAPS-3c5s\LR5\ClientS\ClientS.cpp(131,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  ClientS.vcxproj -> D:\NAPS-3c5s\LR5\x64\Debug\ClientS.exe

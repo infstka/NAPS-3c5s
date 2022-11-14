@@ -1,0 +1,3 @@
+D:\Nada\ПБСП\Lab_5\ClientS\Debug\ClientS.exe
+D:\Nada\ПБСП\Lab_5\ClientS\Debug\ClientS.pdb
+C:\Users\thesi\Desktop\5\ПБСП\Lab_5\ClientS\Debug\ClientS.exe

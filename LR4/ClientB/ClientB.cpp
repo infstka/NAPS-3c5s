@@ -3,7 +3,7 @@
 #include <string>
 #include <tchar.h>
 #include "Winsock2.h"
-
+#pragma warning (disable : 4996)
 #pragma comment(lib, "WS2_32.lib")
 
 SOCKET cC;
@@ -102,12 +102,14 @@ bool GetServer(char* call, short port, sockaddr* from, int* flen)
 	all.sin_addr.s_addr = INADDR_BROADCAST; //всем
 
 	//отправить сообщение
+	//(дескриптор сокета, буфер для пересыл. данных, размер буфера, индикатор режима маршрутизации, указ на сокадр, длина структуры)
 	if ((sendto(cC, call, strlen(call) + 1, NULL, (sockaddr*)&all, sizeof(all))) == SOCKET_ERROR)
 	{
 		throw  SetErrorMsgText("sendto:", WSAGetLastError());
 	}
 
 	//принять сообщение
+	//(дескриптор сокета, буфер для получ данных, размер буфера, индикатор режима маршрутизации, указ на сокадр, указ на размер ту)
 	char nameServer[50];
 	if ((recvfrom(cC, nameServer, sizeof(nameServer), NULL, from, flen)) == SOCKET_ERROR)
 	{
@@ -119,7 +121,7 @@ bool GetServer(char* call, short port, sockaddr* from, int* flen)
 
 	SOCKADDR_IN* addr = (SOCKADDR_IN*)&from;
 	std::cout << std::endl << "Порт сервера: " << addr->sin_port;
-	//std::cout << std::endl << "IP-адрес сервера: " << inet_ntoa(addr->sin_addr);
+	std::cout << std::endl << "IP-адрес сервера: " << inet_ntoa(addr->sin_addr);
 
 	if (!strcmp(nameServer, call))
 	{

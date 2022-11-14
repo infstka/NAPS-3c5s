@@ -4,7 +4,7 @@
 #include <time.h>
 #include <tchar.h>
 #include "Winsock2.h"
-
+#pragma warning (disable : 4996)
 #pragma comment(lib, "WS2_32.lib")
 
 SOCKET sS;
@@ -167,12 +167,14 @@ int main(int argc, _TCHAR* argv[])
 			}
 			else
 			{
-				std::cout << std::endl << PutAnswerToClient("**Eror name**", (sockaddr*)&clnt, &lc);
+				std::cout << std::endl << PutAnswerToClient("**Error name**", (sockaddr*)&clnt, &lc);
 			}
 
 			SOCKADDR_IN* addr = (SOCKADDR_IN*)&clnt;
 			std::cout << std::endl << "Порт клиента: " << addr->sin_port;
-			//std::cout << std::endl << "IP-адрес клиента: " << inet_ntoa(addr->sin_addr);
+
+			//преобразование символьного представления айпив4 адреса в формат тсп 
+			std::cout << std::endl << "IP-адрес клиента: " << inet_ntoa(addr->sin_addr);
 
 			//закрытие сущ. сокета (дескриптор сокета)
 			if (closesocket(sS) == SOCKET_ERROR)
