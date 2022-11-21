@@ -1,6 +1,3 @@
-// ClientS.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
 #include "pch.h"
 #include <iostream>
 #include <stdio.h>
@@ -80,7 +77,7 @@ string SetErrorMsgText(string msgText, int code)
 bool GetServerByName(char* call, char* hostname, short port, sockaddr * from, int* flen)
 {
 	SOCKET sock;
-	hostent* server;
+	hostent* server; //для хранения результата работы функции gethostbyname
 	int optval = 1;
 
 	//для сетвеого протокола ipv4, датаграмнный сокет

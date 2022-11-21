@@ -1,6 +1,6 @@
 ﻿  ServerS.cpp
-D:\NAPS-3c5s\LR5\ServerS\ServerS.cpp(83,5): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-D:\NAPS-3c5s\LR5\ServerS\ServerS.cpp(122,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-D:\NAPS-3c5s\LR5\ServerS\ServerS.cpp(126,11): warning C4101: server: неиспользованная локальная переменная
-D:\NAPS-3c5s\LR5\ServerS\ServerS.cpp(127,11): warning C4101: client: неиспользованная локальная переменная
+D:\NAPS-3c5s\LR5\ServerS\ServerS.cpp(80,5): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\NAPS-3c5s\LR5\ServerS\ServerS.cpp(119,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\NAPS-3c5s\LR5\ServerS\ServerS.cpp(123,11): warning C4101: server: неиспользованная локальная переменная
+D:\NAPS-3c5s\LR5\ServerS\ServerS.cpp(124,11): warning C4101: client: неиспользованная локальная переменная
   ServerS.vcxproj -> D:\NAPS-3c5s\LR5\x64\Debug\ServerS.exe
