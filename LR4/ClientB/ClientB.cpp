@@ -71,7 +71,7 @@ std::string  SetErrorMsgText(std::string msgText, int code)
 	return  msgText + GetErrorMsgText(code);
 };
 
-
+//4
 //послать запрос серверу и получить ответ (позывной сервера, номер порта сервера, указатель на socaddr_in, указатель на размер from)
 bool GetServer(char* call, short port, sockaddr* from, int* flen)
 {
@@ -123,6 +123,7 @@ bool GetServer(char* call, short port, sockaddr* from, int* flen)
 	std::cout << std::endl << "Порт сервера: " << addr->sin_port;
 	std::cout << std::endl << "IP-адрес сервера: " << inet_ntoa(addr->sin_addr);
 
+//сравнение
 	if (!strcmp(nameServer, call))
 	{
 		std::cout << std::endl << "Сервер с таким именем найден";

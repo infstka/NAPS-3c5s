@@ -13,7 +13,7 @@ std::string  GetErrorMsgText(int code)
 {
 	switch (code)
 	{
-	case WSAEINTR: return "Работа функции прервана ";
+	case WSAEINTR: return "Работа функции прервана";
 	case WSAEACCES: return "Разрешение отвергнуто";
 	case WSAEFAULT:	return "Ошибочный адрес";
 	case WSAEINVAL:	return "Ошибка в аргументе";
@@ -72,8 +72,8 @@ std::string  SetErrorMsgText(std::string msgText, int code)
 	return  msgText + GetErrorMsgText(code);
 };
 
-
-//Ожидание запроса клиентской программы
+//1
+//обработка запроса клиентской программы
 bool GetRequestFromClient(
 	char *name,		///позывной сервера (набор символов, получаемый сервером от клиента и интепретируемый, как запрос на установку соединения)
 	short port,		///номер прослушиваемого порта
@@ -100,7 +100,8 @@ bool GetRequestFromClient(
 		throw  SetErrorMsgText("bind:", WSAGetLastError());
 	}
 
-	//ожидание запроса (дескриптор сокета, имя сервера, )
+	//принять сообщение
+	//(дескриптор сокета, буфер для получ данных, размер буфера, индикатор режима маршрутизации, указ на сокадр, указ на размер ту)
 	if ((recvfrom(sS, nameServer, sizeof(nameServer), NULL, from, flen)) == SOCKET_ERROR)
 	{
 		//получ ошибки
@@ -114,6 +115,7 @@ bool GetRequestFromClient(
 		}
 	}
 
+	//сравнение
 	if (!strcmp(nameServer, name))
 	{
 		std::cout << std::endl << "Позывной сервера совпадает";
@@ -126,6 +128,7 @@ bool GetRequestFromClient(
 	}
 }
 
+//2
 //ответить на запрос клиента
 //пересылка позывного сервера программе клиента (позывной сервера, указатель на sockaddr_in, указатель на размер from)
 bool PutAnswerToClient(const char* name, sockaddr* to, int* lto)
@@ -145,9 +148,10 @@ int main(int argc, _TCHAR* argv[])
 	setlocale(LC_CTYPE, "rus");
 	WSADATA wsaData;
 
+	//3
 	try
 	{
-		//инициализ библиотеки вс232длл
+		//инициализ библиотеки вс2 32длл
 		if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0)
 		{
 			throw  SetErrorMsgText("Startup:", WSAGetLastError());
@@ -179,10 +183,10 @@ int main(int argc, _TCHAR* argv[])
 			//закрытие сущ. сокета (дескриптор сокета)
 			if (closesocket(sS) == SOCKET_ERROR)
 			{
-				throw  SetErrorMsgText("closesocket:", WSAGetLastError());
+				throw  SetErrorMsgText("closesocket: ", WSAGetLastError());
 			}
 		}
-		//заверш работы с библиотекой вс232длл
+		//заверш работы с библиотекой вс2 32длл
 		if (WSACleanup() == SOCKET_ERROR)
 		{
 			throw  SetErrorMsgText("Cleanup:", WSAGetLastError());
