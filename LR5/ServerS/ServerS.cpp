@@ -163,7 +163,7 @@ void main()
 //номер прослушиваемого порта, указатель на SOCKADDR_IN, указатель на размер from)
 			if (GetRequestFromClient(name, sockServer, (sockaddr*)&from, &lfrom))
 			{
-				cout << "\n=======Connection=======" << endl;
+				cout << "\nNew connection" << endl;
 				cout << "Client socket: ";
 
 				//преобразование символьного представления айпив4 адреса в формат тсп / преобразовать ю_шорт в тсп
