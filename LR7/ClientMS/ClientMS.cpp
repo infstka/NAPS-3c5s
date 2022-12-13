@@ -78,7 +78,7 @@ int main()
 
     HANDLE hMS; //дескриптор почт ящика
     double t1, t2;
-    char messageL[50] = "Hello from Mailslots-Client Local "; //буфер ввода
+    char messageL[50] = "Hello from Mailslots - Client Local "; //буфер ввода
     DWORD bytes; //длина прочит/запис сообщения
 
     int countMessage = 0;

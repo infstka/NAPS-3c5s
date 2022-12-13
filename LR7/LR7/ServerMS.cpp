@@ -70,7 +70,6 @@ string SetErrorMail(string msgText, int code)
 //mailslot - фиксированное слово
 //box - имя почтового ящика 
 #define MAIL TEXT("\\\\.\\mailslot\\Box")
-#define MAIL1 TEXT("\\\\.\\mailslot\\Box1")
 
 int main()
 {
@@ -89,9 +88,6 @@ int main()
             //создать почтовый ящик
             //(симв имя ящика, макс длина сообщения, интервал ожидания, атрибуты безопасности)
             if ((hMS = CreateMailslot(MAIL, 300, MAILSLOT_WAIT_FOREVER, NULL)) == INVALID_HANDLE_VALUE)
-                throw SetErrorMail("CreateMailslot", GetLastError());
-
-            else if ((hMS = CreateMailslot(MAIL1, 300, MAILSLOT_WAIT_FOREVER, NULL)) == INVALID_HANDLE_VALUE)
                 throw SetErrorMail("CreateMailslot", GetLastError());
             //читать данные из почтового ящика
             while (ReadFile(hMS, buffer, sizeof(buffer), &bytes, NULL))
