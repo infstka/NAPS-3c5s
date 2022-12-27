@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+D:\NAPS-3c5s\LR8-10\ServiceLibrary\RandServer.h(42,16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  ServiceLibrary.cpp
+  Создание кода...
+     Создается библиотека D:\NAPS-3c5s\LR8-10\ServiceLibrary\Debug\ServiceLibrary.lib и объект D:\NAPS-3c5s\LR8-10\ServiceLibrary\Debug\ServiceLibrary.exp
+  ServiceLibrary.vcxproj -> D:\NAPS-3c5s\LR8-10\ServiceLibrary\Debug\ServiceLibrary.dll

@@ -1,0 +1,21 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (Server.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Server.cpp
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(1): warning C4603: _WINSOCK_DEPRECATED_NO_WARNINGS: макрос не определен или определение изменилось после использования предкомпилированного заголовка
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(1): message : Добавление макроопределения в предкомпилированный заголовок вместо определения его здесь
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(4): message : использование предварительно скомпилированного заголовка
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(2): warning C4603: _CRT_SECURE_NO_WARNINGS: макрос не определен или определение изменилось после использования предкомпилированного заголовка
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(2): message : Добавление макроопределения в предкомпилированный заголовок вместо определения его здесь
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(4): message : использование предварительно скомпилированного заголовка
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(70,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(77,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(262,6): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(348,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(364,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(451,100): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(477,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(481,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(482,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(486,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(487,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\NAPS-3c5s\LR8-10\Server\Server.cpp(92): warning C4715: set_param: значение возвращается не при всех путях выполнения
+  Server.vcxproj -> D:\NAPS-3c5s\LR8-10\Server\Debug\ConcurrentServer.exe

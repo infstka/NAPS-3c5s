@@ -1,0 +1,3 @@
+C:\Users\Asus\Desktop\Lab8-10\Server\Debug\ConcurrentServer.exe
+D:\Study\3rd\PiBSP\Lab8-10\Server\Debug\ConcurrentServer.exe
+D:\NAPS-3c5s\LR8-10\Server\Debug\ConcurrentServer.exe
